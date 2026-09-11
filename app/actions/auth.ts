@@ -1,7 +1,7 @@
 "use server"
 import prisma from "@/lib/prisma"
 import { error } from "console"
-import { setSession } from "../_lib/session"
+import { clearSession, setSession } from "../_lib/session"
 import { redirect } from "next/navigation"
 import { UserCreateInput } from "../generated/prisma/models"
 
@@ -96,3 +96,8 @@ export async function registerAction(prevState:resgisterState, formData:FormData
     }
     return { error: null }
 }
+
+
+export async function logoutAction(){     
+        await clearSession()
+}   

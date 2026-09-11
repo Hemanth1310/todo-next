@@ -21,3 +21,7 @@ export async function getSession():Promise<User|null>{
     }
     return JSON.parse(user)
 }
+
+export async function clearSession() {
+    (await cookies()).delete('session')
+}

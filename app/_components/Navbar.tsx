@@ -7,6 +7,7 @@ import { getSession } from '../_lib/session'
 
 const Navbar = async() => {
     const session = await getSession()
+
   return (
     <div className='z-100 w-screen  bg-taupe-300 h-16 shadow-md flex justify-center'>
         <div className='container pl-5 pr-5 h-full flex items-center justify-between '>
