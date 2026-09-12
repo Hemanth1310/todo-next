@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Navbar />
           
           {/* Use flex-1 & flex-col to allow main to expand and pass height down */}
-          <main className="container flex flex-1 flex-col items-center justify-center p-4">
+          <main className="container flex flex-1 flex-col p-4">
             {children}
           </main>
         </body>
