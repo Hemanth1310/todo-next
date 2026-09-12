@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import LogoutButton from './LogoutButton'
 import { getSession } from '../_lib/session'
+import Navlink from './Navlink'
 
 
 const Navbar = async() => {
@@ -18,9 +19,9 @@ const Navbar = async() => {
             <div className='flex items-center justify-between'>
                 {session?<>
                     <LogoutButton/>
-                </>:<div className='flex space-x-4 text-lg'>
-                    <Link className='active:text-red-200 hover:underline hover:font-bold' href='/login'>Login</Link>
-                     <Link className='hover:underline hover:font-bold' href='/login'>Register</Link>
+                </>:<div className='flex gap-4 text-lg'>
+                    <Navlink href='/login'>Login</Navlink>
+                    <Navlink href='/register'>Register</Navlink>
                 </div>}
 
             </div>
